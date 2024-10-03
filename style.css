@@ -1,0 +1,57 @@
+body {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    justify-content: center;
+}
+
+.back-gr {
+    background-color: darkgreen;
+    text-align: center;
+}
+
+.main-head {
+    color: goldenrod;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+
+h4 {
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+
+.cards-content {
+    justify-content: center;
+}
+
+button {
+    color: #016f32;
+    width: 200px;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: larger;
+    border: none;
+    border-radius: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+button:hover {
+    background: darkgoldenrod;
+    color: #013717;
+    cursor: pointer;
+}
+
+.cards {
+    margin: 3px;
+    width: 150px;
+}

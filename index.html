@@ -6,8 +6,21 @@
         <title>JavaScript Course</title>
         <link rel="stylesheet" href="style.css"><link/>
     </head>
-    <body>
-        <h1></h1>
+    <body class="back-gr">
+        <h1 class="main-head">Blackjack Game</h1>
+        <h3 id="message-el"> Wanna play a round?</h3>
+        <div class="cards-content">
+            <h4>YOUR CARDS LIST</h4>
+            <div id="player-cards-el"></div>
+            <h4>Your points:&ensp;<a id="player-points-el">0</a></h4>
+            <h4>DEALER'S CARDS LIST</h4>
+            <div id="dealer-cards-el"></div>
+            <h4>Dealer's points:&ensp;<a id="dealer-points-el">0</a></h4>
+        </div>
+        <button id="starter" onclick="startGame()">START NEW GAME</button> <br>
+        <button id="drawer" onclick="drawCard()">DRAW A CARD</button> <br>
+        <button id="check" onclick="check()">CHECK NOW</button> <br>
+        <button id="home" onclick="homePage()">HOME PAGE</button> <br>
     </body>
     <script src="index.js"></script>
 </html>
