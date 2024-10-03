@@ -58,3 +58,5 @@
   &emsp;3. Learn about APIs and async JavaScript. <br>
 
 <h3>⚡ FULL COURSE CONTENTS: <a href="https://www.youtube.com/watch?v=jS4aFq5-91M">JavaScript Programming - Full Course (Youtube: freeCodeCamp.org)</a></h3>
+<br> <br>
+<h3>MY BLACKJACK GAME: <a href="https://github.com/b1g-Dr4goN/JavaScriptCourse">Github Repository</a>, <a href="https://b1g-dr4gon.github.io/JavaScriptCourse/">Github Deploy</a></h3>
