@@ -91,7 +91,7 @@ function getRandomCard() {
         }
     }
     cards = newCards
-    console.log(cards)
+    //console.log(cards)
     return drewCard
 }
 
