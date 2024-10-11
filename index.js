@@ -80,6 +80,11 @@ let playerCardsEl = document.getElementById("player-cards-el")
 let playerPointsEl = document.getElementById("player-points-el")
 let dealerCardsEl = document.getElementById("dealer-cards-el")
 let dealerPointsEl = document.getElementById("dealer-points-el")
+let checkBtnEl = document.getElementById("check")
+let startBtnEl = document.getElementById("starter")
+let drawBtnEl = document.getElementById("drawer")
+let homeBtnEl = document.getElementById("home")
+let cardsContentEl = document.getElementById("cards-content")
 
 function getRandomCard() {
     let randInt = Math.floor(Math.random() * cards.length)
@@ -96,6 +101,11 @@ function getRandomCard() {
 }
 
 function startGame() {
+    startBtnEl.style.display = "none"
+    drawBtnEl.style.display = ""
+    checkBtnEl.style.display = ""
+    homeBtnEl.style.display = ""
+    cardsContentEl.style.display = ""
     playerPoints = 0
     dealerPoints = 0
     drewCardsList = []
@@ -177,6 +187,8 @@ function drawCard() {
             dealerCardsEl.innerHTML += `<img class="cards" alt="" src="src/images/${x.cardSuit}_${x.cardNum}.png">`
         }
         dealerPointsEl.textContent = `${dealerPoints}`
+        drawBtnEl.style.display = "none"
+        checkBtnEl.style.display = "none"
     }
     else if (playerPoints === 21) {
         if (dealerPoints !== 21) {
@@ -189,6 +201,8 @@ function drawCard() {
             dealerCardsEl.innerHTML += `<img class="cards" alt="" src="src/images/${x.cardSuit}_${x.cardNum}.png">`
         }
         dealerPointsEl.textContent = `${dealerPoints}`
+        drawBtnEl.style.display = "none"
+        checkBtnEl.style.display = "none"
     }
     else if (playerPoints < 21) {
         if (dealerPoints > 21) {
@@ -197,6 +211,8 @@ function drawCard() {
                 dealerCardsEl.innerHTML += `<img class="cards" alt="" src="src/images/${x.cardSuit}_${x.cardNum}.png">`
             }
             dealerPointsEl.textContent = `${dealerPoints}`
+            drawBtnEl.style.display = "none"
+            checkBtnEl.style.display = "none"
         }
         else if (dealerPoints === 21) {
             message = "Dealer got Blackjack! Dealer Won!"
@@ -204,6 +220,8 @@ function drawCard() {
                 dealerCardsEl.innerHTML += `<img class="cards" alt="" src="src/images/${x.cardSuit}_${x.cardNum}.png">`
             }
             dealerPointsEl.textContent = `${dealerPoints}`
+            drawBtnEl.style.display = "none"
+            checkBtnEl.style.display = "none"
         }
         else {
             message = "Draw one more card?"
@@ -224,9 +242,14 @@ function homePage() {
     dealerPointsEl.textContent = "0"
     playerPointsEl.textContent = "0"
     playerCardsEl.innerHTML = ""
+    startBtnEl.style.display = ""
+    homeBtnEl.style.display = "none"
+    cardsContentEl.style.display = "none"
 }
 
 function check() {
+    drawBtnEl.style.display = "none"
+    checkBtnEl.style.display = "none"
     if (playerPoints > 21) {
         if (dealerPoints <= 21) {
             message = "You're busted! Dealer Won!"
@@ -262,6 +285,7 @@ function check() {
             }
         }
     }
+    dealerCardsEl.innerHTML = ""
     for (let x of dealerCardsList) {
         dealerCardsEl.innerHTML += `<img class="cards" alt="" src="src/images/${x.cardSuit}_${x.cardNum}.png">`
     }
